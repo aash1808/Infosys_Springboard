@@ -113,3 +113,33 @@ Tokenization bridges the gap between raw code and machine learning models.
 
 Embeddings let you build smarter tools that understand and find code by meaning, not just by text.
 ![generated-image](https://github.com/user-attachments/assets/dfdc904e-2d47-4924-b15a-6d8cc2d37f5c)
+Here is a clear comparison of the three embedding models used:
+
+| Model                        | Main Focus           | Size & Speed         | Embedding Quality        | Best Use Cases                             |
+|------------------------------|----------------------|----------------------|-------------------------|--------------------------------------------|
+| **MiniLM (all-MiniLM-L6-v2)**| Fast & Lightweight   | Small (384 dims), very fast, low memory use | Good (but not top-tier)   | Real-time apps, mobile, high-volume search |
+| **DistilRoBERTa (msmarco-distilroberta-base-v2)** | Search Optimized      | Medium size (768 dims), moderate speed     | High (training for relevance/ranking)      | Search, retrieval, recommender systems     |
+| **MPNet (all-mpnet-base-v2)**| Highest Accuracy     | Larger (768 dims), slower, higher memory use| Best (latest architecture)                 | Deep semantic search, clustering, analysis |
+
+***
+
+### Key Details
+
+- **MiniLM** is the smallest and fastest, making it ideal where speed matters most (like mobile apps and real-time systems). It sacrifices a bit of accuracy for efficiency.
+- **DistilRoBERTa** balances speed and quality, and is fine-tuned for searching and relevance-ranking tasks. It’s a good middle ground when you want strong accuracy but don’t need maximum precision.
+- **MPNet** uses the newest transformer architecture for the best accuracy in catching the precise meaning of text or code. It requires more memory and runs slower, but is chosen when top semantic performance is most important.
+
+***
+
+### When to Use Each Model
+
+- Choose **MiniLM** for quick, large-scale tasks (chatbots, autocomplete).
+- Choose **DistilRoBERTa** when building a search engine or recommendation tool that relies on finding relevant code or text.
+- Choose **MPNet** for deep analysis, clustering, or any application where understanding deeper meaning and achieving the highest accuracy is the main goal.
+
+[1](https://www.sbert.net/docs/sentence_transformer/pretrained_models.html)
+[2](https://www.reddit.com/r/LocalLLaMA/comments/16cdsv6/which_sentence_transformer_is_the_best_one_for/)
+[3](https://milvus.io/ai-quick-reference/what-are-some-popular-pretrained-sentence-transformer-models-and-how-do-they-differ-for-example-allminilml6v2-vs-allmpnetbasev2)
+[4](https://zilliz.com/ai-faq/how-do-the-various-sbert-models-compare-to-each-other)
+[5](https://cholakovit.com/ai/embeddings/sentence-transformers)
+
