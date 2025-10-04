@@ -1,13 +1,13 @@
-#Python Code Analysis & Embedding Demos
+# Python Code Analysis & Embedding Demos
 This repository demonstrates three essential steps for analyzing Python code snippets using modern libraries:
 
 Static Structure Analysis with AST and Tokenization
 
-##Tokenization Using DistilRoBERTa
+## Tokenization Using DistilRoBERTa
 
 Generating Semantic Embeddings Using Pretrained Models
 
-##1. Static Code Structure Analysis
+## 1. Static Code Structure Analysis
 This code inspects Python code snippets to extract useful information—without executing them!
 
 Finds: Function names, class names, imported modules.
@@ -41,7 +41,7 @@ for code in snippets:
 Purpose
 Analyze code structure, learn what constructs are used, and prepare for deeper analysis.
 
-##2. Tokenizing Code Snippets (DistilRoBERTa)
+## 2. Tokenizing Code Snippets (DistilRoBERTa)
 This code converts Python code snippets from text into token IDs using the DistilRoBERTa tokenizer.
 
 Tokenization: Splits code into model-ready pieces.
@@ -67,7 +67,7 @@ encoded_inputs = tokenizer(
 Purpose
 Makes code understandable for AI models by turning text into numbers.
 
-##3. Creating Semantic Embeddings of Code
+## 3. Creating Semantic Embeddings of Code
 This code uses pretrained models to generate vector representations (embeddings) of code snippets. Supported models:
 
 MiniLM
@@ -95,7 +95,7 @@ embeddings_mpnet = model_mpnet.encode(snippets, normalize_embeddings=True)
 Purpose
 Capture the semantic meaning of code for search, clustering, or advanced code analysis.
 
-###How To Use
+### How To Use
 1.Clone this repository.
 
 2.Install requirements:
@@ -106,9 +106,10 @@ pip install transformers sentence-transformers
 
 4.Run the Jupyter notebook or Python scripts.
 
-##Why These Steps Matter
+## Why These Steps Matter
 Static analysis is the foundation for code understanding, audits, and safety checks.
 
 Tokenization bridges the gap between raw code and machine learning models.
 
 Embeddings let you build smarter tools that understand and find code by meaning, not just by text.
+![generated-image](https://github.com/user-attachments/assets/dfdc904e-2d47-4924-b15a-6d8cc2d37f5c)
