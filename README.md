@@ -137,9 +137,113 @@ Here is a clear comparison of the three embedding models used:
 - Choose **DistilRoBERTa** when building a search engine or recommendation tool that relies on finding relevant code or text.
 - Choose **MPNet** for deep analysis, clustering, or any application where understanding deeper meaning and achieving the highest accuracy is the main goal.
 
-[1](https://www.sbert.net/docs/sentence_transformer/pretrained_models.html)
-[2](https://www.reddit.com/r/LocalLLaMA/comments/16cdsv6/which_sentence_transformer_is_the_best_one_for/)
-[3](https://milvus.io/ai-quick-reference/what-are-some-popular-pretrained-sentence-transformer-models-and-how-do-they-differ-for-example-allminilml6v2-vs-allmpnetbasev2)
-[4](https://zilliz.com/ai-faq/how-do-the-various-sbert-models-compare-to-each-other)
-[5](https://cholakovit.com/ai/embeddings/sentence-transformers)
+
+
+# MILESTONE2
+# Code Generation & Complexity Analysis using Hugging Face Transformers
+
+This project demonstrates how to generate Python code automatically from natural language prompts using state-of-the-art Hugging Face transformer models, and then evaluate the complexity and maintainability of the generated code using Radon.
+
+## 🚀 Features
+
+Interactive Jupyter interface with ipywidgets
+
+Automatic code generation using Hugging Face language models
+
+Code analysis metrics:
+
+Cyclomatic Complexity
+
+Maintainability Index
+
+Lines of Code (LOC)
+
+Automatic results logging in a Pandas DataFrame
+
+## 🧩 Tech Stack
+Component	Library
+Language Model	🤗 transformers
+Deep Learning Backend	torch
+Code Metrics	radon
+UI Components	ipywidgets, IPython.display
+Data Handling	pandas
+
+## 📦 Installation
+
+Clone the repository and install the dependencies:
+git clone https://github.com/<your-username>/<your-repo-name>.git
+cd <your-repo-name>
+
+pip install torch transformers ipywidgets radon pandas
+
+## 🔑 Setup
+
+Before running the notebook, create a Hugging Face token:
+
+Visit https://huggingface.co/settings/tokens
+
+Copy your personal access token.
+
+Add it to your notebook:
+
+HFTOKEN = "<your_huggingface_token_here>"
+
+## 🧮 Usage
+
+Open the notebook milestone2.ipynb in Jupyter Notebook or Google Colab.
+
+Run all the cells.
+
+At the bottom, call the model interface function with your desired model:
+
+model_cell("CodeLlama 7B", "codellama/CodeLlama-7b-hf")
+
+
+Enter a prompt (e.g., “Write a Python function to compute factorial of a number”) and click Generate.
+
+The model will:
+
+Generate code
+
+Display it in the output
+
+Show metrics:
+
+Cyclomatic Complexity
+
+Maintainability Index
+
+Lines of Code
+
+All results are stored in the global metrics_df DataFrame.
+
+.
+
+## 🧠 Example Output
+Prompt:
+# Write a Python function to compute factorial of a number.
+
+Generated Code:
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+Metrics:
+  Cyclomatic Complexity: 2
+  Maintainability Index: 84.9
+  Lines of Code (LOC): 5
+
+## 📊 DataFrame Example
+Model	Prompt	Cyclomatic Complexity	Maintainability Index	LOC
+CodeLlama 7B	Write factorial function	2	84.9	5
+## 💡 Tips
+
+You can use any compatible Hugging Face model, e.g.:
+
+model_cell("StarCoder", "bigcode/starcoder")
+
+
+Adjust max_new_tokens and temperature for more or less creative outputs.
+
 
